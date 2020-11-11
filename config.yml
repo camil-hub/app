@@ -9,10 +9,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "23:f7:dd:4b:be:03:bc:c7:ee:65:5a:b8:8e:4d:bb:10"
-          run:
-            name: Deploy Over add_ssh_keys
-            command: 
-              ssh $SSH_USER@$SSH_HOST "cd gridcomputing && git pull && sudo npm run startcircleci"
 
 workflows:
   version: 2
@@ -21,5 +17,5 @@ workflows:
       - deploy:
           filters:
             branches:
-              onli: depeloper
+              onli: developer
 
