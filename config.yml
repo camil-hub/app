@@ -1,10 +1,6 @@
 version: 2.1
 jobs:
-  #build
-    #...
-  deploy:
-    machine:
-      enable: true
+  deploy-job:
     steps:
       - add_ssh_keys:
           fingerprints:
