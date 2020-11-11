@@ -8,7 +8,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "23:f7:dd:4b:be:03:bc:c7:ee:65:5a:b8:8e:4d:bb:10"
+            - "cf:97:96:8d:49:45:d9:91:ec:a2:c6:cc:32:8f:91:e9"
 
 workflows:
   version: 2.1
