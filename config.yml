@@ -1,0 +1,21 @@
+version: 2.1
+
+
+jobs:
+  deploy-job:
+    machine:
+      enabled: true
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "23:f7:dd:4b:be:03:bc:c7:ee:65:5a:b8:8e:4d:bb:10"
+
+workflows:
+  version: 2.1
+  build-and-deploy:
+    jobs:
+      - deploy-job:
+          filters:
+            branches:
+              only: main
+
