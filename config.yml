@@ -2,18 +2,24 @@ version: 2
 
 
 jobs:
-  deploy-job:
+
+  deploy:
+    machine:
+      enable: true
     steps:
-      -run:
-        name: antes
-        command:
-           echo "Hola mundo"
+      - add_ssh_keys:
+        fingerprints:
+           - "cf:97:96:8d:49:45:d9:91:ec:a2:c6:cc:32:8f:91:e9"
+      - run:
+          name: antes
+          command:
+            echo "Hola mundo"
 
 workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - deploy-job:
+      - deploy:
           filters:
             branches:
               only: main
