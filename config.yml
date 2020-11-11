@@ -3,12 +3,10 @@ version: 2.1
 
 jobs:
   deploy-job:
-    machine:
-      enabled: true
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "cf:97:96:8d:49:45:d9:91:ec:a2:c6:cc:32:8f:91:e9"
+            - "SO:ME:FIN:G:ER:PR:IN:T"
 
 workflows:
   version: 2.1
