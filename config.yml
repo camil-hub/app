@@ -13,3 +13,13 @@ jobs:
             name: Deploy Over add_ssh_keys
             command: 
               ssh $SSH_USER@$SSH_HOST "cd gridcomputing && git pull && sudo npm run startcircleci"
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              onli: depeloper
+
