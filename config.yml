@@ -13,5 +13,5 @@ workflows:
       - deploy:
           filters:
             branches:
-              only: developer
+              only: main
 
