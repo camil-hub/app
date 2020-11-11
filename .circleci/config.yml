@@ -6,7 +6,7 @@ jobs:
     steps:
       - add_ssh_key: # check out the code in the project directory
           fingerprints:
-             - "cf:97:96:8d:49:45:d9:91:ec:a2:c6:cc:32:8f:91:e9"
+             - "33:55:c3:5c:48:ac:10:bb:03:7b:a8:65:ca:ef:f8:14"
       
 workflows:
   version: 2
