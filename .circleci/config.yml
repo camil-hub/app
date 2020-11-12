@@ -6,9 +6,9 @@ jobs:
     machine:
       enabled: true
     steps:
-      - add_ssh_key: # check out the code in the project directory
+      - add_ssh_keys: # check out the code in the project directory
           fingerprints:
-             - "6a:82:81:d4:55:05:80:27:25:8b:a8:eb:f2:70:80:88"
+            - "6a:82:81:d4:55:05:80:27:25:8b:a8:eb:f2:70:80:88"
       - run:
            name: Deploy Over SSH
            command:  
@@ -16,7 +16,7 @@ jobs:
       
 workflows:
   version: 2.1
-  build-and-deploy:
+  deploy:
     jobs:
       - new:
           filters:
