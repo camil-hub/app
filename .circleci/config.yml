@@ -12,7 +12,7 @@ jobs:
       - run:
            name: Deploy Over SSH
            command:  
-             ssh $SSH_USER@$SSH_HOST2 "echo hola" 
+             ssh $SSH_USER@$SSH_HOST2 "pwd" 
       - run:
            name: ejecutar
            command:
