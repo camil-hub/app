@@ -16,7 +16,7 @@ jobs:
       - run:
            name: ejecutar
            command:
-             ls      
+             pwd      
       
 workflows:
   version: 2.1
