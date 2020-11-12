@@ -2,8 +2,6 @@ version: 2.1
 
 jobs:
   new:
-    machine: 
-      enable: true
     steps:
       - add_ssh_key: # check out the code in the project directory
           fingerprints:
