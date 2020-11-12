@@ -12,7 +12,7 @@ jobs:
       - run:
            name: Deploy Over SSH
            command:  
-             ssh $SSH_USER@$SSH_HOST " cd azagent && ls"
+             ssh $SSH_USER@$SSH_HOST " pwd && cd azagent && ls"
       
 workflows:
   version: 2.1
