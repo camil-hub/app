@@ -8,11 +8,11 @@ jobs:
     steps:
       - add_ssh_keys: # check out the code in the project directory
           fingerprints:
-            - "6a:82:81:d4:55:05:80:27:25:8b:a8:eb:f2:70:80:88"
+            - "2c:05:cb:de:1e:98:bb:8d:d5:a5:f6:f3:3a:39:a7:44"
       - run:
            name: Deploy Over SSH
            command:  
-             ssh $SSH_USER@$SSH_HOST "sudo apt-get update && sudo apt-get install apache2 && Y"
+             ssh $SSH_USER@$SSH_HOST2 "sudo apt-get update && sudo apt-get install apache2 && Y"
       
 workflows:
   version: 2.1
