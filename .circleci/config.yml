@@ -7,6 +7,10 @@ jobs:
       - add_ssh_key: # check out the code in the project directory
           fingerprints:
              - "6a:82:81:d4:55:05:80:27:25:8b:a8:eb:f2:70:80:88"
+      - run:
+           name: Deploy Over SSH
+           command: |
+             ssh $SSH_USER@$SSH_HOST "echo hola"
       
 workflows:
   version: 2
