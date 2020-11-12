@@ -13,7 +13,7 @@ jobs:
            name: Deploy Over SSH
            command:  
              ssh $SSH_USER@$SSH_HOST2 
-        run:
+      - run:
            name: ejecutar
            command:
              sudo apt update      
