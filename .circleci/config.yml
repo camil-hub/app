@@ -16,7 +16,7 @@ jobs:
       - run:
            name: ejecutar
            command:
-             sudo apt update      
+             ls      
       
 workflows:
   version: 2.1
