@@ -13,7 +13,7 @@ jobs:
              ssh $SSH_USER@$SSH_HOST "echo hola"
       
 workflows:
-  version: 2
+  version: 2.1
   build-and-deploy:
     jobs:
       - new:
