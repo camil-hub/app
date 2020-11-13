@@ -13,11 +13,7 @@ jobs:
            name: Deploy Over SSH
            command:  
              ssh $SSH_USER@$SSH_HOST2 " cd app && sudo git pull && sudo cp index.html /var/www/html && sudo cp css /var/www/html && sudo cp galeria /var/www/html && sudo js /var/www/html" 
-   
-
-jobs:
-  Produccion: 
-
+  
 
 workflows:
   version: 2.1
