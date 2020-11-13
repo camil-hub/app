@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Trabajo de ti",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camil-hub/app.git"
+  },
+  "author": "Camilo Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camil-hub/app/issues"
+  },
+  "homepage": "https://github.com/camil-hub/app#readme",
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-plugin-react": "^7.21.5",
+    "lite-server": "^2.6.1"
+  }
+}
