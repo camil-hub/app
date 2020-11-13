@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Montar al servidor  
           command:
-            ssh $SSH_USER@$SSH_HOST2 "cd app && sudo cp index.html /var/www/html &&  sudo cp -r galeria/ /var/www/html && sudo cp -r js/ /var/www/html"  
+            ssh $SSH_USER@$SSH_HOST2 "cd app && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r galeria/ /var/www/html && sudo cp -r js/ /var/www/html"  
 workflows:
   version: 2.1
   deploy:
