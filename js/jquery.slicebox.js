@@ -81,7 +81,7 @@
 
 		// Register deferred callbacks
 		if ($.isPlainObject(callback)) {
-			$.each(callback, function (key, value) {
+			$.each(callback, function key, value) {
 				if (key === 'callback') {
 					callback = value;
 				} else if (deferred) {
