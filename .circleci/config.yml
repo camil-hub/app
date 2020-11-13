@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Verificación
           command:  
-            ssh $SSH_USER@$SSH_HOST2 " cd app && acorn --silent js/jquery.nivo.slider" 
+            ssh $SSH_USER@$SSH_HOST2 " cd app && acorn --silent js/jquery.nivo.slider.js" 
       - run:
           name: Montar al servidor  
           command:
