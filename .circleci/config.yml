@@ -1,6 +1,6 @@
 version: 2.1
 
-Verificación:
+verificacion:
   steps:
     - run:
          name: verificacion js
