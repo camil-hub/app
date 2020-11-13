@@ -15,8 +15,8 @@ jobs:
       enabled: true
     steps:
       - add_ssh_keys: # check out the code in the project directory
-            fingerprints:
-              - "2c:05:cb:de:1e:98:bb:8d:d5:a5:f6:f3:3a:39:a7:44"     
+          fingerprints:
+            - "2c:05:cb:de:1e:98:bb:8d:d5:a5:f6:f3:3a:39:a7:44"     
       - run:
           name: Deploy Over SSH
           command:  
