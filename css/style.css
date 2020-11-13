@@ -1,0 +1,248 @@
+
+
+.contenido
+{
+  padding-top: 1em;
+  position: relative;
+    float: right;
+}
+
+ body  {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  
+      
+}
+
+h1 {
+font-family: 'Noto Sans', sans-serif;
+font-size: 48;
+text-shadow: 3px 3px 1px black;
+color: #e3e1e1
+}
+
+p {
+font-family: 'Open Sans', sans-serif;
+color:whitesmoke; 
+font-size: 15
+}
+
+
+
+td {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:whitesmoke;
+    line-height: 20px;
+    padding: 0 20px;
+    text-align: justify;
+    vertical-align: top;
+    width: 50%;
+}
+
+td.first {
+    border-right: 5px solid #4BB495  ;
+}
+
+.marcotexto
+{
+font-family: 'Noto Sans', sans-serif;
+font-size: 30;
+background-color: dimgrey;
+text-shadow: 3px 3px 1px black;
+color: whitesmoke
+    
+}
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ebe0e0;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #061e5f;
+  color: white;
+}
+
+
+.galeria {
+  height: calc( 400px + 3em);
+  width: 400px;
+  margin:1em auto;
+  border: 1px solid #555;
+  position: relative;  
+}
+
+.galeria img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.galeria input[type=radio] {
+  position: relative;
+  bottom: calc(-400px - 1.5em);
+  left: .5em;
+}
+
+.galeria input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1) {
+  opacity: 1;
+}
+
+.galeria input[type=radio]:nth-of-type(2):checked ~ img:nth-of-type(2) {
+  opacity: 1;
+}
+
+.galeria input[type=radio]:nth-of-type(3):checked ~ img:nth-of-type(3) {
+  opacity: 1;
+}
+
+.galeria input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4) {
+  opacity: 1;
+}
+
+.galeria input[type=radio]:nth-of-type(5):checked ~ img:nth-of-type(5) {
+  opacity: 1;
+}
+
+
+.contacto{
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 45px 45px 20px;
+    margin-top: 50px;
+    background-color: black;
+    box-shadow: 0px 5px 10px black, 0 0 0 10px black inset;
+}
+.contacto label{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke
+}
+.contacto div{
+    margin-bottom: 15px;
+}
+.contacto input[type='text'], .contacto textarea{
+    padding: 7px 6px;
+    width: 294px;
+    border: 1px solid black;
+    resize: none;
+    box-shadow:0 0 0 3px black;
+    margin: 5px 0;
+}
+.contacto input[type='text']:focus, .contacto textarea:focus{
+    outline: none;
+    box-shadow:0 0 0 3px black;
+}
+.contacto input[type='submit']{
+    border: 1px solid black;
+    box-shadow:0 0 0 3px black;
+    padding: 8px 16px;
+    border-radius: 0px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    text-shadow: 1px 1px 0px black;
+ 
+    background: Red;
+    
+}
+.contacto input[type='submit']:hover{
+    background: grey;
+   
+}
+.contacto input[type='submit']:active{
+    background: red;
+   
+}
+
+
+.sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    right:-100px;
+    top:230px;
+    width:200px;
+    z-index: 1100;
+}
+.sticky li{
+    list-style-type:none;
+    background-color:#676a6a;
+    color:black;
+    height:43px;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+.sticky li:hover{
+    margin-left:-115px;
+}
+.sticky li img{
+    float:left;
+    margin:5px 4px;
+    margin-right:3px;
+}
+.sticky li p{
+    padding-top:16px;
+    padding-right:30px;
+    margin:5px;
+    line-height:5px;
+    font-family: 'Roboto', sans-serif;
+    font-size:15px;
+}
+.sticky li p a{
+    text-decoration:none;
+    color:black;
+}
+.sticky li p a:hover{
+    text-decoration:underline;
+}
+
+
+address {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: thin dotted;
+  font-family: 'Roboto', sans-serif;
+color: whitesmoke}
+
+.container--head {
+    background: #BF3E11;
+    align-content: center;
+    position:relative;
+    align-content: center;
+    float: right;
+  }
+  
+  
+  
+  .caraousel-tooltip-item {
+    position: relative;
+    display: none;
+  }
+  
+  .caraousel-tooltip-item.active {
+    display: block;
+  }
