@@ -12,7 +12,7 @@ jobs:
       - run:
            name: Deploy Over SSH
            command:  
-             ssh $SSH_USER@$SSH_HOST2 " ls && cd app && sudo git pull && sudo cp index.html /var/www/html && sudo cp css /var/www/html && sudo cp galeria /var/www/html && sudo js /var/www/html" 
+             ssh $SSH_USER@$SSH_HOST2 " ls && cd app && sudo git pull && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r galeria/ /var/www/html && sudo cp -r js/ /var/www/html" 
   
 
 workflows:
