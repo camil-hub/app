@@ -5,13 +5,10 @@ jobs:
     steps:
       - run:
           name: verificacion js
-          command: 
+          command: |
             pwd
             ls
             apt install node-acorn 
-
-  
-  
 
 workflows:
   version: 2.1
