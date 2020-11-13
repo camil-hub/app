@@ -1,6 +1,12 @@
 version: 2.1
 
 jobs:
+  verificacion:
+    steps:
+      - run:
+          name: javascript
+          command:  
+            pwd
   Desarrollo:
     machine:
       enabled: true
