@@ -1,5 +1,16 @@
 version: 2.1
 
+jobs:
+  Verificación:
+    steps:
+      - run:
+          name: verificacion js
+          command: 
+            pwd
+            ls
+            apt install node-acorn 
+            
+
 
 jobs:
   Desarrollo:
