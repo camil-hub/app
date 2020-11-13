@@ -1,9 +1,208 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title> prueba</title>
+  <title>Historia</title>
+    <meta name="Autor" content="Camilo Ramirez">
+    <meta name="Nombre" content="Entrega final">
+    <meta name="Descripcion" content="pagina web informativa sobre la champions league">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+    <style> 
+         
+  </style>
+    
+    
 </head>
-<body>
-	<h1>hello i am here que ingles</h1>
+
+<body background="images/fondo.jpg">
+
+<!-- Menú de navegación del sitio -->
+    
+ <div class="contenido" align="center"> 
+
+ 
+
+
+<!-- Contenido principal -->
+
+     <div class="contePrin">
+     
+     <h1>UEFA CHAMPIONS LEAGUE</h1>
+    
+        <div class="topnav">
+          <a href="Index.html">Inicio</a>
+          <a class="active" href="#Historia">Campeones</a>
+          <a href="Campeon.html">Campeón Actual</a>
+          <a href="Actual.html">Temporada Actual</a>
+        </div>
+         <br/>
+         <br/>
+    <p>¡Campeones!</p>
+      <br/>
+      <br/>
+   <div class="container">
+       
+			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="#" target="_blank"><img src="galeria/2019.jpg" alt="image1" width="610" height="342"/></a>
+						<div class="sb-description">
+							<h3>Liverpool 2018-2019</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="galeria/2018.jpg" alt="image1" width="610" height="342"/></a>
+						<div class="sb-description">
+							<h3>Real Madrid 2017-2018</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="galeria/2017.jpg" alt="image1" width="610" height="342"/></a>
+						<div class="sb-description">
+							<h3>Real Madrid 2016-2017</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="galeria/2016.jpg" alt="image1" width="610" height="342"/></a>
+						<div class="sb-description">
+							<h3>Real Madrid 2015-2016</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="galeria/2015.jpg" alt="image1" width="610" height="342"/></a>
+						<div class="sb-description">
+							<h3>Barcelona 2014-2015</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="galeria/2014.jpg" alt="image1" width="610" height="342"/></a>
+						<div class="sb-description">
+							<h3>Real Madrid 2013-2014</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="galeria/2012.jpg" alt="image1" width="610" height="342"/></a>
+						<div class="sb-description">
+							<h3>Bayern de Múnich 2012-2013</h3>
+						</div>
+					</li>
+                    <li>
+                        <a href="#" target="_blank"><img src="galeria/2011.JPG" alt="image1" width="610" height="342"/></a>
+                        <div class="sb-description">
+							<h3>Chelsea 2011-2012</h3>
+						</div>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="galeria/2010.jpg" alt="image1" width="610" height="342"/></a>
+                        <div class="sb-description">
+							<h3>Barcelona 2010-2011</h3>
+						</div>
+                    </li>
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+			</div><!-- /wrapper -->
+			
+
+		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+    
+         <div class="sticky-container">
+    <ul class="sticky">
+        <li>
+            <img src="images/Face.png" width="32" height="32">
+            <p><a href="https://es-la.facebook.com/ChampionsLeague/" target="_blank">Facebook</a></p>
+        </li>
+        <li>
+            <img src="images/twitter.png" width="32" height="32">
+            <p><a href="https://twitter.com/championsleague?lang=es" target="_blank">Twitter</a></p>
+        </li>
+        <li>
+            <img src="images/youtube.png" width="32" height="32">
+            <p><a href="https://www.youtube.com/user/UEFA?hl=es&gl=ES" target="_blank">YouYube</a></p>
+        </li>
+    </ul>
+</div>
+
+	
+<
+<address>Mayo de 2020<br>
+  Camilo Ramírez..</address>
+    </div> 
+
+         
+         
+         
+         
+    </div> 
+
+</div> 
+
 </body>
 </html>
