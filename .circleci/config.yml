@@ -1,6 +1,6 @@
 version: 2.1
 
-verificacion:
+new:
   steps:
     - run:
          name: verificacion js
@@ -26,7 +26,7 @@ workflows:
   version: 2.1
   deploy:
     jobs:
-      - verificacion:
+      - new:
           filters:
             branches:
               only: main
