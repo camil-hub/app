@@ -28,5 +28,9 @@ workflows:
           filters:
             branches:
               only: main
+      - Aprobacion:
+          type: approval
+          requires:
+            - Desarrollo
       
 
