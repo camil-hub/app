@@ -8,7 +8,8 @@ jobs:
       - run:
           name: javascript
           command:  
-            pwd
+            ls
+            cd project
             ls
       - add_ssh_keys: # check out the code in the project directory
           fingerprints:
