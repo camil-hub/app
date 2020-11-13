@@ -4,13 +4,11 @@ jobs:
   Verificación:
     steps:
       - run:
-          name: verificacion js
-          command: 
-            pwd
-            ls
-            apt install node-acorn 
-            
-
+           name: verificacion js
+           command: 
+             pwd
+             ls
+             apt install node-acorn 
 
 jobs:
   Desarrollo:
