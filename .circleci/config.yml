@@ -1,25 +1,26 @@
 version: 2.1
 
-new:
-  steps:
-    - run:
-         name: verificacion js
-         command: 
-           pwd
-           ls
-           apt install node-acorn 
+jobs:
+  new:
+    steps:
+      - run:
+          name: verificacion js
+          command: 
+            pwd
+            ls
+            apt install node-acorn 
 
-Desarrollo:
-  machine:
-    enabled: true
-  steps:
-    - add_ssh_keys: # check out the code in the project directory
-          fingerprints:
-            - "2c:05:cb:de:1e:98:bb:8d:d5:a5:f6:f3:3a:39:a7:44"     
-    - run:
-         name: Deploy Over SSH
-         command:  
-           ssh $SSH_USER@$SSH_HOST2 " ls && cd app && sudo git pull && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r galeria/ /var/www/html && sudo cp -r js/ /var/www/html" 
+  Desarrollo:
+    machine:
+      enabled: true
+    steps:
+      - add_ssh_keys: # check out the code in the project directory
+            fingerprints:
+              - "2c:05:cb:de:1e:98:bb:8d:d5:a5:f6:f3:3a:39:a7:44"     
+      - run:
+          name: Deploy Over SSH
+          command:  
+            ssh $SSH_USER@$SSH_HOST2 " ls && cd app && sudo git pull && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r galeria/ /var/www/html && sudo cp -r js/ /var/www/html" 
   
 
 workflows:
