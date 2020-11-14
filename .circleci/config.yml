@@ -7,19 +7,19 @@ jobs:
     steps:
       - add_ssh_keys: # check out the code in the project directory
           fingerprints:
-            - "2c:05:cb:de:1e:98:bb:8d:d5:a5:f6:f3:3a:39:a7:44"     
+            - "f9:95:c4:b2:25:c8:8b:7f:bf:ee:dd:ac:30:73:39:5a"     
       - run:
           name: Deploy Over SSH
           command:  
-            ssh $SSH_USER@$SSH_HOST2 " cd app && sudo git pull" 
+            ssh $SSH_USERDES@$SSH_HOSTP " cd app && sudo git pull" 
       - run:
           name: Verificación
           command:  
-            ssh $SSH_USER@$SSH_HOST2 " cd app && acorn --silent js/jquery.nivo.slider.js" 
+            ssh $SSH_USERDES@$SSH_HOSTP " cd app && acorn --silent js/jquery.nivo.slider.js" 
       - run:
           name: Montar al servidor  
           command:
-            ssh $SSH_USER@$SSH_HOST2 "cd app && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r img/ /var/www/html && sudo cp -r js/ /var/www/html && sudo cp -r themes/ /var/www/html"  
+            ssh $SSH_USERDES@$SSH_HOSTP "cd app && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r img/ /var/www/html && sudo cp -r js/ /var/www/html && sudo cp -r themes/ /var/www/html"  
 workflows:
   version: 2.1
   deploy:
