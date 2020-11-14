@@ -9,7 +9,7 @@ jobs:
           fingerprints:
             - "8a:0d:96:a8:ca:3e:b4:b6:6f:d7:86:8d:46:30:4e:0f"     
       - run:
-          name: Deploy Over SSH
+          name: Deploy Over SSH 
           command:  
             ssh $SSH_USERDES@$SSH_HOSTD2 " cd app && sudo git pull" 
       - run:
@@ -29,15 +29,21 @@ jobs:
             - "97:b8:a8:91:6d:62:07:74:af:74:82:6f:3b:41:c2:41" 
             - "f9:95:c4:b2:25:c8:8b:7f:bf:ee:dd:ac:30:73:39:5a"    
       - run:
-          name: Deploy Over SSH
+          name: Deploy Over SSH 1
           command:  
             ssh $SSH_USERDES@$SSH_HOSTD " cd app && sudo git pull"
-            ssh $SSH_USERDES@$SSH_HOSTP " cd app && sudo git pull"  
       - run:
-          name: Montar al servidor  
+          name: Montar al servidor 1 
           command:
             ssh $SSH_USERDES@$SSH_HOSTD "cd app && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r img/ /var/www/html && sudo cp -r js/ /var/www/html && sudo cp -r themes/ /var/www/html"               
-            ssh $SSH_USERDES@$SSH_HOSTP "cd app && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r img/ /var/www/html && sudo cp -r js/ /var/www/html && sudo cp -r themes/ /var/www/html"
+      - run:
+          name: Deploy Over SSH 2
+          command:  
+            ssh $SSH_USERDES@$SSH_HOSTP " cd app && sudo git pull"  
+      - run:
+          name: Montar al servidor 2 
+          command:
+            ssh $SSH_USERDES@$SSH_HOSTP "cd app && sudo cp index.html /var/www/html && sudo cp -r css/ /var/www/html && sudo cp -r img/ /var/www/html && sudo cp -r js/ /var/www/html && sudo cp -r themes/ /var/www/html"      
 workflows:
   version: 2.1
   deploy:
