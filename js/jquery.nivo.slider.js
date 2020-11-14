@@ -8,7 +8,7 @@
  */
 
 (function($) {
-    var NivoSlider = function(element, options){
+    var NivoSlider = function{
         // Defaults are below
         var settings = $.extend({}, $.fn.nivoSlider.defaults, options);
 
